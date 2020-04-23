@@ -1,5 +1,6 @@
-#!/bin/sh -l
+#!/bin/sh
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+# `$*` expands the `args` supplied in an `array` individually
+# or splits `args` in a string separated by whitespace.
+sh -c "echo $*"
+python main.py
