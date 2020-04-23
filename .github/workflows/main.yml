@@ -13,6 +13,8 @@ jobs:
         id: hello
         with:
           who-to-greet: "Mona the Octocat"
+        env:
+          AN_ENV_VARIABLE: "a-static-thing"
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
